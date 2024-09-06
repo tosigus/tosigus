@@ -1,0 +1,16 @@
+set bell-style none
+### Befehl mit History vervollständigen: in ~/.inputrc folgendes eintragen:
+### Quelle: https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+### Quelle: https://stackoverflow.com/questions/12044574/getting-complete-and-menu-complete-to-work-together
+# display all possible matches for an ambiguous pattern at first tab
+set show-all-if-ambiguous on
+# next tab(s) will cycle through matches
+TAB: menu-complete
+# shift tab cycles backward
+"\e[Z": menu-complete-backward
+
+# damit werden komische Symbole, ausgelöst durch Mausinteraktionen, nicht angezeigt
+set enable-bracketed-paste Off

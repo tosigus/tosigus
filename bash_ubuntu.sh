@@ -23,15 +23,15 @@ then
     mv ~/.tmux.conf ~/.backup_shell/.tmux.conf_`date +"%Y-%m-%d_%T"`
     mv ~/.vimrc ~/.backup_shell/.vimrc_`date +"%Y-%m-%d_%T"`
 	echo "Inputrc anpassen"
-    wget https://github.com/tosigus/tosigus/main/dateien/inputrc
+    wget https://raw.githubusercontent.com/tosigus/tosigus/main/dateien/inputrc
     less inputrc > ~/.inputrc
     rm inputrc
 	echo "Inputrc anpassen fertig"
-    wget https://github.com/tosigus/tosigus/main/dateien/bashrc
+    wget https://raw.githubusercontent.com/tosigus/tosigus/main/dateien/bashrc
     less bashrc > ~/.bashrc
     rm bashrc
     echo "Bash wurde eingerichtet"
-    wget https://github.com/tosigus/tosigus/main/dateien/tmux.conf
+    wget https://raw.githubusercontent.com/tosigus/tosigus/main/dateien/tmux.conf
     less tmux.conf > ~/.tmux.conf
     rm tmux.conf
     echo "tmux wurde installiert und eingerichtet"
@@ -39,7 +39,7 @@ then
     mkdir ~/.vim && mkdir ~/.vim/backup &&  mkdir ~/.vim/swap &&  mkdir ~/.vim/undo 
     #git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    wget https://github.com/tosigus/tosigus/main/dateien/vimrc
+    wget https://raw.githubusercontent.com/tosigus/tosigus/main/dateien/vimrc
     less vimrc > ~/.vimrc
     rm vimrc
     vim +PlugInstall +qall
